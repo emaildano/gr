@@ -1,0 +1,73 @@
+// Global Archive Styles
+// ---------------------
+
+.blog-sidebar {
+  display: none;
+
+  @include media($primary-breakpoint) {
+    display: block;
+    @include span-columns(2);
+    @include shift(11);
+  }
+
+  h3.head-5 {
+    color: $black;
+  }
+
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    @extend %head-5;
+  }
+
+  h3.head-5,
+  li {
+    padding: 0 0 rem(10);
+  }
+
+  a {
+    color: $gray-20;
+  }
+}
+
+.blog-entries {
+
+  @include media($primary-breakpoint) {
+    @include span-columns(9);
+    @include shift(-12);
+  }
+}
+
+
+.share {
+
+  .head-4 {
+
+    &:after {
+      content: '';
+      display: block;
+      height: 1px;
+      background: $gray-20;
+      margin: rem(15) 0 rem(10);
+    }
+  }
+
+  a {
+    color: $gray-10;
+    padding-right: 10px;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+
+.single-module {
+
+
+}
+

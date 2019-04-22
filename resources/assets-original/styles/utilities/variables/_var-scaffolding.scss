@@ -1,0 +1,45 @@
+// Variables: Scaffolding
+// ----------------------
+
+// GRID
+// ============================================================
+
+// Basic Settings
+$grid-columns: 14;
+$gutter: 28px !global;
+$fg-gutter: 1.5em;
+$max-container-width: 1800px;
+$max-width: $max-container-width;
+
+$mobile-space: rem(30);
+$mobile-nav-gap: rem(80);
+$tablet-nav-gap: rem(100);
+
+// Container Sizes
+$xsmall-container:    500px;
+$small-container:			700px;
+$medium-container:		970px;
+$large-container:			1400px;
+$container-break:     $gutter;
+
+// Breakpoints
+$xsmall:    		new-breakpoint(min-width $xsmall-container + $container-break);   		// Big pocket screens
+$small: 				new-breakpoint(min-width $small-container + $container-break); 		 		// Tablets
+$medium: 				new-breakpoint(min-width $medium-container + $container-break); 	 		// Laptops / Small Desktop
+$large: 				new-breakpoint(min-width $large-container + $container-break); 		    // Large Desktops
+$xlarge:        new-breakpoint(min-width $max-container-width + $container-break);    // Full Width
+
+$xsmall-max:    new-breakpoint(max-width $xsmall-container + $container-break);   		// Big pocket screens
+$small-max: 		new-breakpoint(max-width $small-container + $container-break); 		 		// Tablets
+$medium-max: 		new-breakpoint(max-width $medium-container + $container-break); 	 		// Laptops / Small Desktop
+$large-max: 		new-breakpoint(max-width $max-container-width + $container-break); 		// Large Desktops
+
+$primary-breakpoint: $medium; // When the site undergoes it most radical changes, such as mobile nav to desktop nav
+
+// Base Settings
+$visual-grid: false;
+$visual-grid-color: yellow;
+$visual-grid-index: front;
+$visual-grid-opacity: .5;
+
+$single-column-width: flex-grid(1, $grid-columns) + flex-gutter($grid-columns);

@@ -1,0 +1,71 @@
+// Global Header Styles
+
+.site-logo {
+  margin-left: $mobile-space;
+
+  @include media($primary-breakpoint) {
+    @include span-columns(5);
+    @include shift(1);
+  }
+
+  svg {
+    max-width: 150px;
+    fill: $blue;
+    position: relative;
+    top: -12px;
+
+    @include media($xsmall) {
+      top: -18px;
+      max-width: 225px;
+    }
+
+    @include media($medium) {
+      max-width: 275px;
+      width: 275px;
+      height: 90px;
+    }
+  }
+
+  #logo-ground,
+  #logo-reconsidered {
+    transition: transform 0.6s ease, opacity 0.6s ease;
+  }
+
+  #logo-ground { transform: translate3d(0, 0, 0); }
+
+  #logo-reconsidered { transform: translate3d(0, 0, 0); }
+
+  &:hover {
+
+    #logo-ground { transform: translate3d(0, 2px, 0); }
+    #logo-reconsidered { transform: translate3d(0, -2px, 0); }
+  }
+}
+
+.front-page .site-logo {
+
+  #logo-ground {
+    transform: translate3d(0, 10px, 0);
+    opacity: 0;
+  }
+
+  #logo-reconsidered {
+    transform: translate3d(0, -10px, 0);
+    opacity: 0;
+  }
+}
+
+.front-page.logo-animate .site-logo {
+
+  #logo-ground {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  #logo-reconsidered {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+

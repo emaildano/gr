@@ -1,0 +1,147 @@
+// Front Page Styles
+// -----------------
+
+.front-page .navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: opacity 0.35s;
+
+  &.open-swipe {
+    opacity: 0;
+  }
+}
+
+.row-table.about {
+  max-height: 534px;
+}
+
+.slide-wrapper {
+  width: 100%;
+}
+
+.about--content {
+  display: none;
+  @extend %light;
+
+  @include media($small) {
+    display: table-cell;
+    padding: 20px 0;
+
+    p {
+      margin-bottom: rem(15);
+      font-size: rem(16);
+    }
+
+    p,
+    .read-more {
+      padding: 0 $mobile-space;
+    }
+  }
+
+  @include media($primary-breakpoint) {
+
+    p {
+      margin-bottom: rem(30);
+      font-size: inherit;
+    }
+
+    p,
+    .read-more {
+      padding: 0 15%;
+    }
+  }
+
+  @include media($large) {
+    p,
+    .read-more {
+      padding: 0 20%;
+    }
+  }
+}
+
+.featured-projects {
+  padding: $mobile-padding;
+
+  @include media($small) {
+    padding: rem(60) $mobile-padding $mobile-padding;
+  }
+
+  @include media($primary-breakpoint) {
+    padding: rem(119) 0 rem(103);
+  }
+
+  p {
+    @extend %light;
+    text-align: center;
+    margin-bottom: $mobile-padding;
+    padding: 0 25px;
+
+    @include media($small) {
+      @include span-columns(8);
+      @include shift(3);
+      padding: 0 50px;
+      margin-bottom: rem(60);
+    }
+
+    @include media($medium) {
+      margin-bottom: rem(92);
+    }
+  }
+}
+
+// Modal
+.modal--wrapper {
+  position: fixed;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+
+  .loaded & {
+    opacity: 1;
+
+    &.fade-out {
+      opacity: 0;
+    }
+  }
+}
+
+.modal {
+  background: $white;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: auto;
+  left: 30px;
+  padding: $mobile-padding;
+
+  @include media($primary-breakpoint) {
+    max-width: 634px;
+    padding: rem(85) rem(75);
+    top: 50%;
+    right: auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.modal--title {
+  color: $blue;
+  font-weight: 600;
+
+  @include media($primary-breakpoint) {
+    font-size: rem(26);
+  }
+}
+
+.modal--content {
+  font-weight: 200;
+}
+
+.modal--button {
+  padding-top: rem(30);
+}
+
+

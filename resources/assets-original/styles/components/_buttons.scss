@@ -1,0 +1,12 @@
+// Button Styles
+// -------------
+
+.btn {
+  @extend %btn;
+}
+
+#{$all-buttons},
+.btn-default {
+  @extend %btn;
+  @include button-styler;
+}

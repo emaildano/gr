@@ -1,0 +1,39 @@
+// Global Page Header
+// ------------------
+$lead-padding: ($mobile-padding + rem(25));
+
+.page-lead {
+  @include row();
+  padding: $lead-padding $mobile-padding;
+
+  @include media($primary-breakpoint) {
+    padding: rem(90) 0 rem(120);
+  }
+
+  .head-1 {
+    margin-bottom: rem(10);
+
+    @include media($primary-breakpoint) {
+      margin-bottom: rem(20);
+    }
+  }
+}
+
+.page-lead--lead {
+  margin-bottom: $mobile-padding;
+
+  @include media($primary-breakpoint) {
+    @include span-columns(7.5);
+    @include shift(5);
+    margin-bottom: 0;
+  }
+}
+
+.page-lead--aside {
+  max-width: 80%;
+
+  @include media($primary-breakpoint) {
+    @include shift(-10.5);
+    max-width: none;
+  }
+}

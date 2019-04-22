@@ -1,0 +1,104 @@
+// PROJECT ARCHIVE PAGE
+// --------------------
+
+
+.project-filter-vault,
+.archive-filter-vault {
+  display: none;
+}
+
+.project-archive-title {
+  color: $blue;
+  font-size: rem(18);
+  margin-bottom: $mobile-padding;
+
+  @include media($primary-breakpoint) {
+    @include shift(1);
+    font-size: rem(24);
+    text-transform: capitalize;
+    margin-bottom: rem(40);
+  }
+
+  &.js--title {
+    display: none;
+
+    @include media($primary-breakpoint) {
+      display: block;
+    }
+  }
+}
+
+
+.project-wrapper {
+  padding: 0 $mobile-padding;
+
+  @include media($primary-breakpoint) {
+    padding: 0;
+  }
+
+  .project-module {
+    margin-bottom: rem(50);
+  }
+
+  &.archive-view {
+    display: none;
+  }
+}
+
+
+// MODULES
+// -------
+.project-module,
+.project-archive-module {
+  transition: all 0.35s ease-out;
+  opacity: 1;
+  transform: scale(1);
+  transform-origin: center center;
+
+  &.removing {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.35s ease-out;
+  }
+}
+
+// ARCHIVE MODULE
+// --------------
+.project-archive-wrapper {
+  padding: $mobile-padding;
+  color: $gray-60;
+
+  @include media($primary-breakpoint) {
+    padding: rem(70) 0 rem(90);
+  }
+
+  .project-archive-title {
+    font-size: rem(11);
+    margin-bottom: rem(11);
+    color: $gray-60;
+
+    @include media($primary-breakpoint) {
+      font-size: inherit;
+      margin-bottom: inherit;
+      color: $blue;
+    }
+  }
+}
+
+.project-archive-module {
+  @extend %project-module-column;
+  font-size: rem(11);
+
+  @include media($primary-breakpoint) {
+    font-size: rem(18);
+  }
+
+  p {
+    padding: rem(10) 0;
+    border-bottom: 1px solid $gray-20;
+
+    @include media($primary-breakpoint) {
+      padding: rem(30) 0 rem(10);
+    }
+  }
+}

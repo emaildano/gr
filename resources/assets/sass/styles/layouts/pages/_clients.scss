@@ -1,0 +1,170 @@
+// Client Page
+// -----------
+
+// Background
+.clients-archive main.main {
+  background: $gray-5;
+  padding-bottom: $mobile-padding;
+
+  @include media($primary-breakpoint) {
+    padding-bottom: rem(250);
+  }
+}
+
+
+// Page Lead
+.clients-page {
+
+  .page-lead--lead {
+
+    @include media($primary-breakpoint) {
+      @include span-columns(8);
+      @include shift(5);
+    }
+  }
+
+  .page-lead--aside {
+
+    @include media($primary-breakpoint) {
+      @include shift(-11);
+    }
+  }
+}
+
+
+// Filter
+.client-filter {
+  background: $white;
+  padding: $mobile-padding;
+
+  @include media($primary-breakpoint) {
+    @include span-columns(2);
+    @include shift(2);
+    clear: left;
+    background: transparent2;
+    padding: 0;
+  }
+
+  h3.head-5 {
+    display: none;
+
+    @include media($primary-breakpoint) {
+      display: block;
+      color: $black;
+      margin-bottom: rem(10);
+    }
+  }
+}
+
+.client-filter--list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 600;
+  font-size: rem(13);
+  max-height: 0;
+  transition: max-height 0.35s ease;
+  overflow: hidden;
+
+  @include media($primary-breakpoint) {
+    font-size: rem(16);
+    max-height: none;
+  }
+
+  &.open-nav {
+    max-height: 400px;
+
+    @include media($primary-breakpoint) {
+      max-height: none;
+    }
+  }
+
+  li {
+    margin-bottom: 10px;
+
+    &:first-child {
+      margin-top: 10px;
+
+      @include media($primary-breakpoint) {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.client-fliter--link {
+  color: $gray-20;
+  &:hover,
+  &:active,
+  &:focus  { color: $blue; }
+}
+
+
+// List Entries
+.client-list {
+  padding: $mobile-padding;
+
+  @include media($primary-breakpoint) {
+    @include span-columns(10);
+    padding: 0;
+  }
+}
+
+.client-list--entry {
+  border-bottom: 1px solid $gray-20;
+  padding: rem(10) 0;
+  display: block;
+  width: 100%;
+
+  @include media($primary-breakpoint) {
+    width: 34.4905917382%;
+    display: inline;
+    margin-left: 10.18145161%;
+    transition: color 0.35s ease-in-out;
+  }
+
+  p { margin: 0; }
+
+  &.inactive {
+    display: none;
+
+    @include media($primary-breakpoint) {
+      display: inline;
+    }
+  }
+
+  &.active {
+    color: $gray-60;
+
+    @include media($primary-breakpoint) {
+      color: $blue;
+    }
+  }
+}
+
+#masonry-measure {
+
+  @include media($primary-breakpoint) {
+    width: 50%;
+    height: 1px;
+  }
+}
+
+.resp-client-toggle {
+  font-size: rem(13);
+  font-weight: 600;
+  color: $blue;
+
+  @include media($primary-breakpoint) {
+    display: none;
+  }
+
+  span {
+    padding-right: rem(10);
+  }
+}
+
+
+
+
