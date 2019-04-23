@@ -39,7 +39,7 @@ define('GOOGLE_FONTS', false);            // Google Fonts           False or Fon
 define('SIDEBAR_LAYOUT_RIGHT', true);     // Sidebar Layout           . Setting to false produces left layout
 
 if (WP_ENV == 'production' || WP_ENV == 'staging') {
-//  define('DIST_DIR', '/dist/');
+  define('DIST_DIR', '/public/');
 } else {
  define('DIST_DIR', '/public/');
 }
