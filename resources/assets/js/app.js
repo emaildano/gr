@@ -1,8 +1,8 @@
 // Theme by default loads a jQuery as dependency of the main script.
 // Let's include it using ES6 modules import.
-import $ from "jquery";
+const $ = require('jquery');
 const slick = require("slick-carousel");
-var Masonry = require("masonry-layout");
+const Masonry = require("masonry-layout");
 
 /*
    Copyright 2013 Ivan Gilchrist
