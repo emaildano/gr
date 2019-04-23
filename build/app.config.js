@@ -102,7 +102,7 @@ module.exports = merge({
       open: env('BROWSERSYNC_OPEN', false),
       reloadDelay: env('BROWSERSYNC_DELAY', 500),
       files: [
-        '*.php',
+        '**/*.php',
         'app/**/*.php',
         'resources/templates/**/*.php',
         'resources/assets/js/**/*.js',

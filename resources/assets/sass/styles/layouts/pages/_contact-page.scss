@@ -1,12 +1,10 @@
 .page-contact {
-
   .footer-content--content {
     display: none;
   }
 }
 
 .contact-wrapper {
-
   @include media($xsmall) {
     @include row(table);
   }
@@ -62,9 +60,7 @@
 
 // Infobox
 %map-info-styles {
-  color: $white;
   font-size: rem(13) !important;
-  color: $white;
   max-width: rem(280);
 
   @include media($primary-breakpoint) {
@@ -74,13 +70,17 @@
 
   span {
     display: block;
-    &.blue { font-weight: 600; }
+    &.blue {
+      font-weight: 600;
+    }
   }
 
-  .read-more { color: $white; }
+  .read-more {
+    // color: $white;
+  }
 }
 
-.gm-style-iw {
+.gm-style-iw-d {
   display: none;
   @extend %map-info-styles;
 
@@ -111,7 +111,6 @@
     display: table-cell;
 
     .contact-map--content {
-
       @include media($primary-breakpoint) {
         display: block;
       }
@@ -120,7 +119,4 @@
   .contact-map.google-map {
     display: none;
   }
-
 }
-
-

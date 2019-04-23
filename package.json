@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "bourbon-neat": "^1.8.0",
+    "jquery": "^3.4.0",
+    "masonry-layout": "^4.2.2",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {

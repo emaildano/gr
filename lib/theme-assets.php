@@ -113,7 +113,7 @@ function assets() {
 
   // GOOGLE MAPS
   if( is_page(108) ) {
-    wp_enqueue_script('google_maps', 'https://maps.googleapis.com/maps/api/js?v=3', [], null, true);
+    wp_enqueue_script('google_maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCZG-xwOhjcTz_BmxIUikjvHmPupZBNSQQ', [], null, true);
   }
 
   // BASIC SITE SCRIPTS
