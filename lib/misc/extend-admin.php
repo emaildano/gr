@@ -31,10 +31,6 @@ function hide_on_screen() {
 // Hide the Admin Bar in in dev
 // =============================================================================
 
-if(WP_ENV === 'development' || WP_ENV === 'staging') :
-  add_filter('show_admin_bar', '__return_false');
-endif;
-
 // Change Posts to News
 function change_post_label() {
     global $menu;
