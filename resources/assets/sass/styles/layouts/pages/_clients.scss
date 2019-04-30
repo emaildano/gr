@@ -11,12 +11,9 @@
   }
 }
 
-
 // Page Lead
 .clients-page {
-
   .page-lead--lead {
-
     @include media($primary-breakpoint) {
       @include span-columns(8);
       @include shift(5);
@@ -24,13 +21,11 @@
   }
 
   .page-lead--aside {
-
     @include media($primary-breakpoint) {
       @include shift(-11);
     }
   }
 }
-
 
 // Filter
 .client-filter {
@@ -41,7 +36,7 @@
     @include span-columns(2);
     @include shift(2);
     clear: left;
-    background: transparent2;
+    background: transparent;
     padding: 0;
   }
 
@@ -97,9 +92,10 @@
   color: $gray-20;
   &:hover,
   &:active,
-  &:focus  { color: $blue; }
+  &:focus {
+    color: $blue;
+  }
 }
-
 
 // List Entries
 .client-list {
@@ -124,7 +120,9 @@
     transition: color 0.35s ease-in-out;
   }
 
-  p { margin: 0; }
+  p {
+    margin: 0;
+  }
 
   &.inactive {
     display: none;
@@ -144,7 +142,6 @@
 }
 
 #masonry-measure {
-
   @include media($primary-breakpoint) {
     width: 50%;
     height: 1px;
@@ -164,7 +161,3 @@
     padding-right: rem(10);
   }
 }
-
-
-
-
